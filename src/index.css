@@ -1,0 +1,171 @@
+/* Base styles */
+html,
+body {
+    margin: 0;
+    background: linear-gradient(to bottom, #fff8e7, #fcefe3);
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+
+/* Container */
+.container {
+    margin: 45px 40px;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #800000, #B71C1C);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 60px;
+    box-shadow: 0 4px 12px rgba(183, 28, 28, 0.3);
+    font-family: 'Poppins', sans-serif;
+}
+
+header > img {
+    width: 24px;
+    margin-right: 7px;
+}
+
+header > h1 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Journal Cards */
+article.journal-entry {
+    display: flex;
+    margin-bottom: 36px;
+    background: #FFF7EC;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: fadeInUp 0.6s ease both;
+}
+
+article.journal-entry:hover {
+    background: #FFE8D1;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+/* Journal Image */
+article.journal-entry .main-image-container {
+    width: 230px;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 12px;
+    flex-shrink: 0;
+    margin-right: 19px;
+}
+
+article.journal-entry .main-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+article.journal-entry .main-image-container:hover .main-image {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Info Container */
+.info-container span.country {
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-right: 12px;
+    color: #D84315;
+    font-weight: bold;
+}
+
+
+
+.info-container a {
+    color: #B71C1C;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.info-container a:hover {
+    color: #FFD700;
+}
+
+.info-container a:visited {
+    color: #918E9B;
+}
+
+/* Entry Title */
+.info-container h2.entry-title {
+    margin-top: 7px;
+    margin-bottom: 17px;
+    color: #4E342E;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+/* Entry Text */
+.info-container p.trip-dates {
+    font-weight: bold;
+}
+
+.info-container p.entry-text {
+    line-height: 1.6;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    color: #333;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.site-footer {
+  background: linear-gradient(90deg, #800000, #B71C1C);
+  color: #fff;
+  text-align: center;
+  padding: 20px 10px;
+  font-size: 0.9rem;
+  font-family: 'Poppins', sans-serif;
+  margin-top: 40px;
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
+}
+
+.site-footer a {
+  color: #FFD700;
+  text-decoration: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .site-footer {
+    font-size: 0.8rem;
+    padding: 15px 5px;
+  }
+}
+
