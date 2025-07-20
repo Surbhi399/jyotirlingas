@@ -1,7 +1,9 @@
-export default function Header() {
+
+import globeIcon from "public/images/globe.png"; // 👈 import the image
+export default function Header(){
     return (
         <header>
-            <img src="public/images/globe.png" alt="globe icon" />
+            <img src={globeIcon} alt="globe icon" />
             <h1>Jyotirlingas in India.</h1>
         </header>
     )
